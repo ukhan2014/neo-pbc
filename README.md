@@ -3,15 +3,14 @@ The new pbc
 
 Uses node + mongo on backend
 
-***********
-Mongo
-***********
+###### Mongo
+
 > show dbs   <-- see dbs
 > use <db name>   <-- select a db to work with
 > show collections   <-- show the documents/data stored in the selected db
 > db.getCollection('repl-failOver').find({})     <-- if collection name has hyphen in it
 
-*example run:*
+** example run: **
 ~/neo-pbc$ mongo
 MongoDB shell version v3.4.7
 > show dbs
