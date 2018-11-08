@@ -20,7 +20,7 @@ Uses node + mongo on backend
 > db.getCollection('repl-failOver').find({})     <-- if collection name has hyphen in it
 ```
 
-###### example run:
+###### Mongo example run:
 ```
 ~/neo-pbc$ mongo
 MongoDB shell version v3.4.7
