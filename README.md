@@ -3,6 +3,15 @@ The new pbc
 
 Uses node + mongo on backend
 
+###### Prereq
+```
+1. get node + npm
+2. create project directory and cd into it
+3. install LoopBack CLI via NPM: $ npm install -g loopback-cli
+4. use loopback (make sure you are in project dir): $ lb 
+   i. lb will ask questions, give your app a name, use the current loopback version, select api-server as application type
+```
+
 ###### Mongo
 ```
 > show dbs   <-- see dbs
