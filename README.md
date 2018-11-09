@@ -9,7 +9,32 @@ Uses node + mongo on backend
 2. create project directory and cd into it
 3. install LoopBack CLI via NPM: $ npm install -g loopback-cli
 4. use loopback (make sure you are in project dir): $ lb 
-   i. lb will ask questions, give your app a name, use the current loopback version, select api-server as application type
+     i. lb will ask questions, give your app a name, use the current loopback version, 
+        select api-server as application type, follow through with the install
+    ii. at this point the app can be run: $ node .
+   iii. loopback generated APIs can be checked at the localhost address the CLI shows
+5. Need to setup mongo connection to the app:
+     i. open datasources.json in the Server folder, it should show connection is in memory.
+        This means that the data source being used is RAM. Need to change this to Mongo.
+    ii. make sure mongod service is running: $ sudo service mongodb status
+   iii. $ npm install --save loopback-connector-mongodb    <--   no need for --save hook (automatic w/ this npm ver)
+    iv. $ lb datasource mongoDS --connector mongoDB    <-- this will ask questions:
+     v. datasource name: mongoDS, connector for mongoDS: mongoDB (supported by Strongloop)
+        host: localhost, port: 27017, database: [any name]
+    vi. The above selections should automatically leave the datasources.json file updated
+        if not, datasources.json will need to be manually updated, here is an example:
+        {
+          "db": {
+            "host": "localhost",
+            "port": 27017,
+            "url": "",
+            "database": "food",
+            "password": "",
+            "name": "mongoDS",
+            "user": "",
+            "connector": "mongodb"
+          }
+        }
 ```
 
 ###### Mongo
