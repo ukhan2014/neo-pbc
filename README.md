@@ -35,6 +35,12 @@ Uses node + mongo on backend
             "connector": "mongodb"
           }
         }
+6. Now models need to be created in the db
+      i. $ lb model
+     ii. model name: <name>, datasource: db (mongodb), base class: PersistedModel, Rest API: yes, common model, then add properties.
+    iii. This should automatically update the models in the common/models/db_name.json
+7. Now if you run app: $ node .
+   The loopback explorer (localhost:xxxx/explorer) will have REST API test links for the new db/models
 ```
 
 ###### Mongo
