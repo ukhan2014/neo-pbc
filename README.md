@@ -47,6 +47,38 @@ Uses node + mongo on backend
 ```
 1. $ lb acl
 2. apply to all existing models, scope is all methods/properties, access type is all match all types, role:any unauth user, permission:deny
+3. Now APIs will not work without auth
+```
+
+###### Register/Login
+```
+1. To register, POST to /Users: 
+   {
+     "realm": "string",
+     "username": "urname",
+     "email": "email@address.com",
+     "emailVerified": true,
+     "password": "xxxxx"
+   }
+   You should get response 200
+2. To login, POST to /Users/login the info used for registration:
+   {
+     "email": "mail@address.com" ,
+      "password": "xxxxx"
+   }
+3. Response json will contain an id field which is the access token. This token can be entered in the Loopback API explorer top bar to provide access to APIs in the explorer. 
+For example: 
+
+ACCESS_TOKEN=6Nb2ti5QEXIoDBS5FQGWIz4poRFiBCMMYJbYXSGHWuulOuy0GTEuGx2VCEVvbpBK
+
+# Authorization Header
+curl -X GET -H "Authorization: $ACCESS_TOKEN" \
+http://localhost:3000/api/widgets
+
+# Query Parameter
+curl -X GET http://localhost:3000/api/widgets?access_token=$ACCESS_TOKEN
+
+More info: https://loopback.io/doc/en/lb2/Making-authenticated-requests.html
 ```
 
 ###### Mongo
