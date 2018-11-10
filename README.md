@@ -43,6 +43,12 @@ Uses node + mongo on backend
    The loopback explorer (localhost:xxxx/explorer) will have REST API test links for the new db/models
 ```
 
+###### Auth
+```
+1. $ lb acl
+2. apply to all existing models, scope is all methods/properties, access type is all match all types, role:any unauth user, permission:deny
+```
+
 ###### Mongo
 ```
 > show dbs   <-- see dbs
