@@ -5,7 +5,12 @@
   box-sizing: border-box;
 }
 body {
-  max-width: 600px;
+  background-image: url("../images/cat.jpeg");
+  background-position: 50% 50%;
+  background-repeat:repeat;
+  width: 100%;
+  max-width: 800px;
+      height: auto;
   margin: auto;
   font-family:'arial';
   color:#fff;
@@ -17,28 +22,41 @@ body {
 #parent_div {
 
   position:relative;
+/*
   height:800px;
-  width:600px;
+  width:800px;
+*/
+  height:auto;
+  width:auto;
+
+  float: left;
+  margin-left: 10px;
 }
 
 #title {
-  font-family:'arial';
+  /*font-family:'arial'; */
+  font-family: 'Indie Flower', cursive;
   color:#000;
 }
 #bg-image {
 
-/*  background: repeating-linear-gradient(
+  background: repeating-linear-gradient(
   45deg,
   #606dbc,
-  #606dbc 10px,
-  #465298 10px,
-  #465298 20px
-); */
+  #606dbc 5px,
+  #465298 5px,
+  #465298 10px
+);
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+  z-index: -1;
 
-max-width: 100%;
-    height: auto;
+
   /* The image used */
-  background-image: url("../images/bail.jpg");
+/*  background-image: url("../images/bail.jpg");
 
 position:absolute;
 top:0;
@@ -46,11 +64,10 @@ left:0;
 right:0;
 bottom:0;
   z-index: -1;
-  /* Add the blur effect */
+
   filter: blur(8px) opacity(8);
   -webkit-filter: blur(8px) opacity(88%);
-
-  /* Full height */
+  */
   height: 100%;
 
   /* Center and scale the image nicely */
