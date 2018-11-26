@@ -9,8 +9,15 @@
   <body>
 
     <header>
-      <div id="title">
-        <h1>PetBuddy</h1>
+      <div class="title">
+        <a href="#default" class="logo">PetBuddy</a>
+        <div class="title-right">
+          <a ui-sref="home" ui-sref-active="active">Home</a>
+          <a ui-sref="login" ui-sref-active="active">Log in</a>
+          <a ui-sref="sign-up" ui-sref-active="active">Sign up</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
 
       <h2 ng-show="currentUser">Hello {{currentUser.email}}</h2>
@@ -18,6 +25,9 @@
         <ul>
           <li>
             <a ui-sref="all-reviews" ui-sref-active="active">Your feed</a>
+          </li>
+          <li>
+            <a ui-sref="home" ui-sref-active="active">Home</a>
           </li>
           <li ng-hide="currentUser">
             <a ui-sref="sign-up" ui-sref-active="active">Sign up</a>
@@ -39,14 +49,12 @@
     </header>
     <div id="parent_div">
 
-    <div id="bg-image">
+    <div id="gradient">
     </div>
 
     <div id="textarea">
 
     <main ui-view>
-      <div id="bg-image">
-      </div>
 
     </main>
 
