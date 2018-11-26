@@ -17,6 +17,11 @@ angular
         templateUrl: 'views/all-reviews.html',
         controller: 'AllReviewsController'
       })
+      .state('home', {
+        url: '/home',
+        templateUrl: 'views/home.html',
+        controller: 'homeController'
+      })
       .state('edit-review', {
         url: '/edit-review/:id',
         templateUrl: 'views/review-form.html',
