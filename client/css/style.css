@@ -19,6 +19,10 @@ body {
   height: 100%;
 }
 
+.actions {
+  text-align: center;
+}
+
 #parent_div {
 
   position:relative;
